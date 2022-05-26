@@ -6,7 +6,7 @@ import 'package:grafimedia/views/book_desc_view.dart';
 import 'package:hive/hive.dart';
 import 'package:grafimedia/controller/book-data-store.dart';
 import 'package:grafimedia/models/books.dart';
-import 'package:grafimedia/models/shop.dart';
+import 'package:grafimedia/models/book_lib.dart';
 
 import '../boxes.dart';
 import 'library_view.dart';

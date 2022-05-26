@@ -1,6 +1,6 @@
 import 'package:hive/hive.dart';
 import '../views/library_view.dart';
-part 'shop.g.dart'; // digunakan untuk generate file menggunakan build_runner
+part 'book_lib.g.dart'; // digunakan untuk generate file menggunakan build_runner
 
 @HiveType(typeId: 0) class Shop extends HiveObject{
   @HiveField(0) String? id;

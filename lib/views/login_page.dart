@@ -49,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(height: 32),
             _formSection(username_controller, 'Username'),
             SizedBox(height: 16),
-            _formSection(password_controller, 'Password'),
+            _formSectionPass(password_controller, 'Password'),
             SizedBox(height: 24),
             _buttonSubmit(),
           ],
@@ -63,6 +63,19 @@ class _LoginPageState extends State<LoginPage> {
       controller: text_controller,
       decoration: InputDecoration(
         border: OutlineInputBorder(),
+        labelText: label,
+      ),
+    );
+  }
+
+  Widget _formSectionPass(dynamic text_controller, String label) {
+    return TextField(
+      controller: text_controller,
+      obscureText: true,
+      decoration: InputDecoration(
+        border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10.0)
+        ),
         labelText: label,
       ),
     );

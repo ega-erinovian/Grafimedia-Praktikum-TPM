@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'shop.dart';
+part of 'book_lib.dart';
 
 // **************************************************************************
 // TypeAdapterGenerator

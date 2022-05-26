@@ -30,7 +30,17 @@ class ProfilePage extends StatelessWidget {
           child: FutureBuilder<String>(
             future: SharedPref().getUsername(),
             builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
-              return Text("${snapshot.data}");
+              return Container(
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const Text("Welcome Back!", style: TextStyle(fontSize: 30),),
+                    Text(snapshot.data!, style:TextStyle(fontWeight: FontWeight.bold, fontSize: 25) , textAlign: TextAlign.left,),
+                    SizedBox(height: 15),
+                  ],
+                ),
+              );
             },
           ),
         ),

@@ -3,7 +3,7 @@ import 'package:grafimedia/views/login_page.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'boxes.dart';
-import 'models/shop.dart';
+import 'models/book_lib.dart';
 
 void main() async {
   // Hive.initFlutter();

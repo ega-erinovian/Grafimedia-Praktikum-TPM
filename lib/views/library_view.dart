@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grafimedia/views/checkout_form_view.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:grafimedia/boxes.dart';
-import 'package:grafimedia/models/shop.dart';
+import 'package:grafimedia/models/book_lib.dart';
 
 class LibraryView extends StatefulWidget {
   const LibraryView({Key? key}) : super(key: key);
