@@ -1,6 +1,5 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-
 class SharedPref {
   Future<SharedPreferences> _pref = SharedPreferences.getInstance();
 

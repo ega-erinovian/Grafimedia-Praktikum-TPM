@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:grafimedia/views/book_desc_view.dart';
 import 'package:hive/hive.dart';
-import 'package:grafimedia/controller/book-data-store.dart';
+import 'package:grafimedia/controller/book_data_store.dart';
 import 'package:grafimedia/models/books.dart';
 import 'package:grafimedia/models/book_lib.dart';
 
@@ -46,11 +46,11 @@ class _BooksCatalogState extends State<BooksCatalog> {
         ],
       ),
       body: Container(
-        // FutureBuilder() membentuk hasil Future dari request API kita
+        // FutureBuilder() membentuk hasil Future dari request API
         child: FutureBuilder(
           future: BookDataSource.instance.loadBooks(widget.text),
           builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
-            if (snapshot.hasError) {
+            if (snapshot.hasError || widget.text.isEmpty) {
               return _buildErrorSection();
             }
             if (snapshot.hasData) {
@@ -72,7 +72,11 @@ class _BooksCatalogState extends State<BooksCatalog> {
   }
 
   Widget _buildErrorSection() {
-    return Text("Error");
+    if(widget.text.isEmpty){
+      return const Text("Search bar cannot be Empty");
+    }else{
+      return const Text("Error acquaired");
+    }
   }
 
   // Jika data ada
